@@ -1,0 +1,45 @@
+This is alpha code. No warranties, no promises.
+
+Copyright (c) 1996-1997 Hugo van der Sanden. All rights reserved. This
+program is free software; you can redistribute it and/or modify it under
+the same terms as Perl itself.
+
+Here's some stuff you might need to know:
+
+* there's no Makefile.PL. To use this stuff, either point a 'use lib' at
+it or put it in your perl lib hierarchy somewhere
+
+* it almost certainly uses constructs that didn't work before perl 5.003
+
+* it includes several workarounds to avoid bugs that will be fixed in
+perl 5.004
+
+* these files are included:
+    README                Some accompanying documentation
+    DBSimple/DB.pm        Support for database objects
+    DBSimple/Table.pm     Support for table objects
+    DBSimple/Msql.pm      Msql v1 binding for databases and tables
+    DBSimple/Msql2.pm     Msql v2 binding for databases and tables
+    DBSimple/Field.pm     Support for field objects
+    DBSimple/Type.pm      Support for field types
+
+* if you're going to try to read the code, be aware that I use 4-space
+tab stops. I've space-fixed this document to make life easier for you.
+
+* numeric dates in the docs are UK-style: dd/mm/yy
+
+* each module contains POD that may accurately and completely describe
+it's use and operation
+
+* almost all the docs worth reading are in DB.pm and Table.pm; the rest
+is all under-the-hood stuff
+
+* I'm not that well up on POD, so you may find some of my markup choices
+infelicitous for the particular POD-reading mechanism you use. If so,
+try this instead:
+    perl -ne 'print if /^=head/ .. /^=cut/' DB.pm | more
+
+All comments, suggestions, bugfixes etc appreciated, even ones about
+my parentage (comments that is, not bugfixes).
+
+Hugo van der Sanden (hv@crypt.compulink.co.uk), 29th March 1997
